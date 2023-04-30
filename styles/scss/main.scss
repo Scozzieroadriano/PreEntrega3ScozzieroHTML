@@ -1,14 +1,15 @@
 @import "./base";
 
-//Importamos los archivos que conforman el header principal de la página
+//Importk los archivos que conforman el header principal de la página.
 @import "./components/header.scss";
 @import "./components/menu-redes-sociales";
 @import "./components/menu-principal";
 @import "./components/dropdown-menu";
-
-
-
-
+//Importo los archivos que conforman el main de cada seccion.
+@import "./components/main-estructura";
+//Importo los archivos que conforman el footer de cada seccion.
 @import "./components/footer.scss";
+//Importo los archivos que conforman cada una de las secciones de cada página.
+@import "./pages/index"
 
 

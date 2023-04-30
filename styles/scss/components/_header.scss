@@ -9,6 +9,8 @@
     "logo  menu btn btn";
     padding: .5em;
     gap: .5rem;
+    position: fixed;
+    top: 0;
 
     &__logo-empresa{
         grid-area: logo;        

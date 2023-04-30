@@ -1,0 +1,48 @@
+.seccion-principal{
+    width: 100%;
+    @include flex-center;
+    flex-direction: column;
+
+    &__title{
+        visibility: hidden;
+    }
+
+    &__portada{
+      @include flex-center;
+      flex-direction: column;
+        img{
+            width: 100%;
+            
+        }
+        &-desc{
+            @include estilo-parrafo;
+            background-color: $secondary-color;
+            padding: 1em;
+        }
+        
+    }
+
+    &__article{
+        @include flex-center;
+        flex-direction: column;
+        background-color: rgb(123, 121, 121);
+        color: white;
+
+        &-title{
+            margin-top: .5em;
+        }
+
+        &-text{
+           @include estilo-parrafo;
+           text-align: justify;
+           padding: 1em;
+        }
+        &-boton{
+            background-color: $btn-color;
+            color:white;
+            padding: 8px;
+            border-radius: 10px 0 10px 10px;
+            margin-bottom: 10px;
+        }
+    }
+}

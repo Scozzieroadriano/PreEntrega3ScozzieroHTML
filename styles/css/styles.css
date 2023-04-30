@@ -10,12 +10,34 @@ ul, li {
   margin: 0;
 }
 
+hr {
+  margin: 0.5rem;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
+
 a {
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: black;
+}
+
+h1 {
+  font-weight: 700;
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1;
+  text-decoration: underline;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 2;
 }
 
 .header {
@@ -27,6 +49,8 @@ a {
   grid-template-areas: "logo social social social" "logo  menu btn btn";
   padding: 0.5em;
   gap: 0.5rem;
+  position: fixed;
+  top: 0;
 }
 .header__logo-empresa {
   grid-area: logo;
@@ -64,21 +88,80 @@ a {
   width: 25px;
   height: 20px;
 }
-.dropdown .dropdown-no-caret::after {
+.dropdown-no-caret::after {
   display: none;
 }
-
 .dropdown-menu {
   background-color: rgba(11, 12, 12, 0.4431372549);
   justify-self: end;
 }
-
 .dropdown-menu li a {
   color: white;
   font-size: 0.8rem;
   font-weight: bold;
   line-height: 2;
   border: 1px solid white;
+}
+
+main {
+  width: 100%;
+  margin-top: 100px;
+}
+
+.seccion-principal {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.seccion-principal__title {
+  visibility: hidden;
+}
+.seccion-principal__portada {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.seccion-principal__portada img {
+  width: 100%;
+}
+.seccion-principal__portada-desc {
+  text-align: center;
+  font-size: medium;
+  font-style: italic;
+  font-weight: 600;
+  font-family: serif;
+  background-color: #86a8d9;
+  padding: 1em;
+}
+.seccion-principal__article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(123, 121, 121);
+  color: white;
+}
+.seccion-principal__article-title {
+  margin-top: 0.5em;
+}
+.seccion-principal__article-text {
+  text-align: center;
+  font-size: medium;
+  font-style: italic;
+  font-weight: 600;
+  font-family: serif;
+  text-align: justify;
+  padding: 1em;
+}
+.seccion-principal__article-boton {
+  background-color: #025591;
+  color: white;
+  padding: 8px;
+  border-radius: 10px 0 10px 10px;
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */

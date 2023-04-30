@@ -9,23 +9,22 @@
             height: 20px;
         }
     }
-    .dropdown-no-caret::after {
-        display: none;
+    &-no-caret::after {
+        display: none; //Utilizo esta propiedad debido a que no necesito mostrar en ningun momento la imagen del triangulo y tampoco necesito que ocupe lugar
     }
 
+    &-menu {
+        background-color: #0b0c0c71;
+        justify-self: end;
+
+        li a{
+            color: white;
+            font-size: 0.8rem;
+            font-weight: bold;
+            line-height: 2;
+            border: 1px solid white;
+        }
+    }
 }
 
 
-
-.dropdown-menu {
-    background-color: #0b0c0c71;
-    justify-self: end;
-}
-
-.dropdown-menu li a {
-    color: white;
-    font-size: 0.8rem;
-    font-weight: bold;
-    line-height: 2;
-    border: 1px solid white;
-}
