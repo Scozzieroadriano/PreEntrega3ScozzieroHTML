@@ -1,0 +1,31 @@
+.dropdown {
+    grid-area: btn;
+
+    .btn {
+        background-color: $btn-color;       
+
+        img{
+            width: 25px;
+            height: 20px;
+        }
+    }
+    .dropdown-no-caret::after {
+        display: none;
+    }
+
+}
+
+
+
+.dropdown-menu {
+    background-color: #0b0c0c71;
+    justify-self: end;
+}
+
+.dropdown-menu li a {
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    line-height: 2;
+    border: 1px solid white;
+}

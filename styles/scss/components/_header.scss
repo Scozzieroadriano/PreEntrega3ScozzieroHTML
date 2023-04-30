@@ -1,0 +1,19 @@
+.header{
+    width: 100%;
+    background-color:$primary-color;
+    display:grid;
+    grid-template-columns: 100px 1fr repeat(2, 20px);
+    grid-template-rows: repeat(2,40px);
+    grid-template-areas: 
+    "logo social social social"
+    "logo  menu btn btn";
+    padding: .5em;
+    gap: .5rem;
+
+    &__logo-empresa{
+        grid-area: logo;        
+        width: 100%;   
+        border: 1px solid black;  
+    }
+    
+}

@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+$primary-color:#0576c7;
+$secondary-color: rgb(151, 151, 151);
+$btn-color: #025591;
+
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+a{
+    @include flex-center; 
+    text-decoration: none;
+    color: black;
+ }
