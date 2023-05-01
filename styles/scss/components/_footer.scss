@@ -1,0 +1,16 @@
+.footer{
+    background-color: $primary-color;
+    @include flex-box(center,center,column);
+    padding: 10px;
+    gap: 5px;
+    font-size: .7rem;
+    text-align: center;
+    color: white;
+
+    a{display: inline;
+        font-style: italic;
+        color: white;
+        text-decoration: underline;
+    }
+
+}

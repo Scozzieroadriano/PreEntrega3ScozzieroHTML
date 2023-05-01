@@ -7,19 +7,27 @@
 $primary-color:#0576c7;
 $secondary-color: #86a8d9;
 $complement-color:#2CA1DB;
+$tertiary-color: rgb(236, 240, 23) ;
 $btn-color: #025591;
+
 //Declaro mixins
-@mixin flex-center {
+@mixin flex-box ($justify:center,$align:center,$direction:column) {
     display: flex;
-    align-items: center;
-    justify-content: center;   
+    align-items: $align;
+    justify-content: $justify; 
+    flex-direction: $direction;  
 }
-@mixin estilo-parrafo {
+@mixin estilo-parrafo($background){
     text-align: center;
-    font-size:medium;
+    font-size:1rem;
     font-style: italic;
     font-weight:600;
     font-family: serif;
+    background-color: $background;
+    @if lightness($background)>50{
+        color: black;
+    } @else {color: white;}
+
 }
 //Declaro propiedades de etiquetas generales
 ul,li{
@@ -28,7 +36,8 @@ ul,li{
     margin: 0;    
 }
 hr{
-    margin:.5rem;
+    margin:.3rem;
+    visibility: hidden;
 }
 
 body{
@@ -36,7 +45,7 @@ body{
     color: black
 }
 a{
-    @include flex-center; 
+    @include flex-box(center,center,row);
     text-decoration: none;    
  }
 h1{
