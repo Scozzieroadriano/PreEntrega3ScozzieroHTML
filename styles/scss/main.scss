@@ -1,6 +1,7 @@
 @import "./base";
-//Importo la hoja de estilos para todos los botones a utilizar.
+//Importo la hoja de estilos para todos los botones y tarjetas a utilizar.
 @import "./components/buttons";
+@import "./components/cards";
 //Importo hoja de carrusel.
 @import "./components/carousel-sobre-nosotros";
 //Importo los archivos que conforman el header principal de la página.
@@ -12,8 +13,11 @@
 @import "./components/main-estructura";
 //Importo los archivos que conforman el footer de cada seccion.
 @import "./components/footer.scss";
+//Importo archivo de mapas para crear una lista de productos.
+@import "./components/productos-ciclo-dos";
 //Importo los archivos que conforman cada una de las secciones de cada página.
 @import "./pages/index";
-@import "./pages/sobre-nosotros"
+@import "./pages/sobre-nosotros";
+@import "./pages/productos"
 
 

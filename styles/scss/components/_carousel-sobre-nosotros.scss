@@ -1,3 +1,23 @@
-.carousel-inner .carousel-item {
-    transition: none;
+.carousel-item{
+    background-color: $secondary-color;
+    .title-suceso{
+        width: 100%;
+        display: block;
+        text-align: center;
+        border: 1px solid black;
+        border-bottom: none;
+        margin:0;
+        padding:.5em
+    }
+    .desc-suceso{
+        width: 100%;
+        display: block;
+        border: 1px solid black;
+        border-top: none;
+        margin: 0;
+        @include estilo-parrafo;
+        text-align: justify;
+        padding:.5em
+
+    }
 }

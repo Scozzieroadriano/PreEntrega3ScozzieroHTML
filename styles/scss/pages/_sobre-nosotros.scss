@@ -2,6 +2,7 @@
     width: 100%;
     @include flex-box (center,center,column);
     gap: 10px;
+    margin-bottom: 20px;
 
     &__title{
         margin-top: 15px;
@@ -10,7 +11,32 @@
     &__subtitles{
         align-self: start;
         padding-left: 1em;
+        text-decoration: underline;
         font-style: italic;
     }
-    
+    .vision-historia{
+        width: 100%;
+    }
+
+    &__card{        
+
+        img {width: 100%;}
+
+        &-body{
+            @include flex-box(center,center,column);
+            padding: 1em;
+            background-color: $card-color;
+        }
+        &-text{
+            @include estilo-parrafo;
+            text-align: justify;
+        }
+        &-btn{
+            @include button-index;
+            outline: none;            
+           
+        }
+
+    }
+       
 }

@@ -10,6 +10,7 @@ $complement-color:#2CA1DB;
 $tertiary-color: rgb(236, 240, 23) ;
 $btn-color: #025591;
 $white:white;
+$card-color:rgba(160, 38, 38, 0.527);
 
 //Declaro mixins
 @mixin flex-box ($justify:center,$align:center,$direction:column) {
@@ -63,4 +64,7 @@ h2{
    font-size: 1.2rem;
    line-height: 2;
 
+}
+h4{
+    font-size: medium;
 }

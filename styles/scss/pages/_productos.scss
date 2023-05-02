@@ -1,0 +1,63 @@
+.seccion-productos{
+    width: 100%;
+    @include flex-box (center,center,column);
+    gap: 10px;
+    margin-bottom: 20px;
+
+    &__title{
+        margin-top: 15px;
+    }
+    &__banner-portada{
+        background-image: url(../../../images/fondos/fondo-banner.jpg);
+        @include flex-box(center, center , column);
+        background-size: cover;
+        @include contraste (black);
+
+        &-title{
+            font-size: 1rem;
+        }
+        &-subtitle{
+            font-size: 1.5rem;
+            color: gold;
+            text-decoration: underline;     
+        }
+    }
+    &__contenedor-marcas{
+        @include flex-box(center,center,row);
+        gap: 20px;
+
+       .btn{
+        border: 1px solid $btn-color;
+       }
+    }
+    &__catalogo{        
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            display: grid;
+            gap:10px;
+            grid-template-columns:  repeat(2,1fr);
+            overflow-y: auto;
+
+                      
+
+            @each $imagen, $ruta in $cortes-imagenes {
+
+                &-producto-#{$imagen} {
+                  width: 100px;
+                  height: 100px;
+                  background-image: url(#{$ruta});  
+                  background-size: cover;                  
+                  background-position: center center;   
+                  border-radius: 100px;                  
+            
+                              
+
+            }
+          
+    }
+
+}
+
+}
