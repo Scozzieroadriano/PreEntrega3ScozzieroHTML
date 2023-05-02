@@ -53,13 +53,62 @@
     </header>
 
     <main>
-        <h1>Nosotros</h1>
-        <section>
+        
+        <section class="seccion-nosotros">
+            <h1 class="seccion-nosotros__title">COMPAÑÍA:</h1>
+            <h2 class="seccion-nosotros__subtitles historia">Historia de la Empresa</h2>
+
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" transition = "none">
+                  <div class="carousel-item active">
+                    <img src="../images/historia/coliseo.jpg" class="d-block w-100" alt="primera imagen de la historia de la empresa, en este caso se trata del coliseo romano">
+                    <p>hola</p>
+                </div>
+                  <div class="carousel-item">
+                    <img src="../images/historia/egipto.jpg" class="d-block w-100" alt="segunda imagen de la historia de la empresa, en este caso es una esfinge de egipto">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../images/historia/estatuas.jpg" class="d-block w-100" alt="estatuas de anda a saber donde la sacaron">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../images/historia/monumento.jpg" class="d-block w-100" alt="monumento de anda a saber donde la sacaron">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+    
             
-        </section>
+            <h2 class="seccion-nosotros__subtitles vision">Historia de una Visión</h2>
+        
+            <div class="vision-historia">
+              <iframe id="vision-historia" width="100%" height="100%" src="https://www.youtube.com/embed/mdtUvgbaAno"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+          </div>      
+          <article class="sobre-nosotros_article">
+            <hr>
+            <h2 class="seccion-nosotros__subtitles ciclo-2">Ciclo 2</h2>
+            <hr>
+          </article>
+          </section>
 
     </main>
-    <footer></footer>
+    <footer class="footer">
+        <span>Finlar S.A. © Todos los derechos reservados - 2023 </span>
+        <span>Defensa de las y los Consumidores. Reclamos: <a
+                href="https://www.argentina.gob.ar/economia/comercio/defensadelconsumidor" target="_blank"
+                >aquí</a> </span>
+        <span>Desarrollado por Adriano Scozziero</span>
+
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

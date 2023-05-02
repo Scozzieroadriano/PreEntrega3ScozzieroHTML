@@ -1,0 +1,16 @@
+.seccion-nosotros{
+    width: 100%;
+    @include flex-box (center,center,column);
+    gap: 10px;
+
+    &__title{
+        margin-top: 15px;
+    }
+
+    &__subtitles{
+        align-self: start;
+        padding-left: 1em;
+        font-style: italic;
+    }
+    
+}

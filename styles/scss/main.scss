@@ -1,6 +1,8 @@
 @import "./base";
 //Importo la hoja de estilos para todos los botones a utilizar.
 @import "./components/buttons";
+//Importo hoja de carrusel.
+@import "./components/carousel-sobre-nosotros";
 //Importo los archivos que conforman el header principal de la página.
 @import "./components/header.scss";
 @import "./components/menu-redes-sociales";
@@ -11,6 +13,7 @@
 //Importo los archivos que conforman el footer de cada seccion.
 @import "./components/footer.scss";
 //Importo los archivos que conforman cada una de las secciones de cada página.
-@import "./pages/index"
+@import "./pages/index";
+@import "./pages/sobre-nosotros"
 
 

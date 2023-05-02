@@ -9,6 +9,7 @@ $secondary-color: #86a8d9;
 $complement-color:#2CA1DB;
 $tertiary-color: rgb(236, 240, 23) ;
 $btn-color: #025591;
+$white:white;
 
 //Declaro mixins
 @mixin flex-box ($justify:center,$align:center,$direction:column) {
@@ -17,12 +18,14 @@ $btn-color: #025591;
     justify-content: $justify; 
     flex-direction: $direction;  
 }
-@mixin estilo-parrafo($background){
+@mixin estilo-parrafo{
     text-align: center;
     font-size:1rem;
     font-style: italic;
     font-weight:600;
     font-family: serif;
+}
+@mixin contraste($background){
     background-color: $background;
     @if lightness($background)>50{
         color: black;
@@ -51,9 +54,9 @@ a{
 h1{
     font-weight: 700;
     margin: 0;
-    font-size: 1.8rem;
-    line-height: 1;
-    text-decoration: underline;
+    font-size: 1.2rem;
+    vertical-align: baseline;
+    line-height: 1.5em;
 }
 h2{
    margin: 0;

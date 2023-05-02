@@ -31,15 +31,19 @@ a {
 h1 {
   font-weight: 700;
   margin: 0;
-  font-size: 1.8rem;
-  line-height: 1;
-  text-decoration: underline;
+  font-size: 1.2rem;
+  vertical-align: baseline;
+  line-height: 1.5em;
 }
 
 h2 {
   margin: 0;
   font-size: 1.2rem;
   line-height: 2;
+}
+
+.carousel-inner .carousel-item {
+  transition: none;
 }
 
 .header {
@@ -53,6 +57,9 @@ h2 {
   gap: 0.5rem;
   position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 .header__logo-empresa {
   grid-area: logo;
@@ -118,16 +125,18 @@ main {
   justify-content: center;
   flex-direction: column;
   padding: 10px;
-  gap: 5px;
+  gap: 15px;
   font-size: 0.7rem;
   text-align: center;
+  background-color: #0576c7;
   color: white;
 }
 .footer a {
   display: inline;
   font-style: italic;
-  color: white;
   text-decoration: underline;
+  background-color: #0576c7;
+  color: white;
 }
 
 .seccion-principal {
@@ -145,6 +154,8 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: #86a8d9;
+  color: black;
 }
 .seccion-principal__portada img {
   width: 100%;
@@ -155,8 +166,6 @@ main {
   font-style: italic;
   font-weight: 600;
   font-family: serif;
-  background-color: #86a8d9;
-  color: black;
   width: 100%;
   height: 25vh;
   padding: 1em;
@@ -166,11 +175,6 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  text-align: center;
-  font-size: 1rem;
-  font-style: italic;
-  font-weight: 600;
-  font-family: serif;
   background-color: rgb(236, 240, 23);
   color: black;
   padding: 1em;
@@ -179,14 +183,20 @@ main {
   margin-top: 0.5em;
 }
 .seccion-principal__article-text {
+  text-align: center;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 600;
+  font-family: serif;
   text-align: justify;
 }
 .seccion-principal__article-boton {
   background-color: #025591;
   color: white;
   padding: 8px;
-  border-radius: 10px 0 10px 10px;
+  border-radius: 30px 0 30px 30px;
   margin-bottom: 5px;
+  border: solid 2px white;
 }
 .seccion-principal__contacto {
   height: 200px;
@@ -204,9 +214,27 @@ main {
   background-color: #025591;
   color: white;
   padding: 8px;
-  border-radius: 10px 0 10px 10px;
+  border-radius: 30px 0 30px 30px;
   margin-bottom: 5px;
+  border: solid 2px white;
   margin-top: 10px;
+}
+
+.seccion-nosotros {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.seccion-nosotros__title {
+  margin-top: 15px;
+}
+.seccion-nosotros__subtitles {
+  align-self: start;
+  padding-left: 1em;
+  font-style: italic;
 }
 
 /*# sourceMappingURL=styles.css.map */
