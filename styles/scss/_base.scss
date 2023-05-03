@@ -7,10 +7,10 @@
 $primary-color:#0576c7;
 $secondary-color: #86a8d9;
 $complement-color:#2CA1DB;
-$tertiary-color: rgb(236, 240, 23) ;
+$tertiary-color: rgb(240, 139, 23) ;
 $btn-color: #025591;
 $white:white;
-$card-color:rgba(160, 38, 38, 0.527);
+$card-color:rgb(236, 205, 29);
 
 //Declaro mixins
 @mixin flex-box ($justify:center,$align:center,$direction:column) {
@@ -25,6 +25,7 @@ $card-color:rgba(160, 38, 38, 0.527);
     font-style: italic;
     font-weight:600;
     font-family: serif;
+    padding: 2em;
 }
 @mixin contraste($background){
     background-color: $background;
@@ -67,4 +68,15 @@ h2{
 }
 h4{
     font-size: medium;
+}
+
+@mixin tablet-resolution {
+    @media screen and (min-width: 577px){
+        @content;
+    }
+}
+@mixin desktop-resolution {
+    @media screen and (min-width: 768px){
+        @content;
+    }
 }

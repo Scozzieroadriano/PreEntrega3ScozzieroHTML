@@ -46,18 +46,35 @@ h4 {
   font-size: medium;
 }
 
-.seccion-productos__catalogo-card {
+.seccion-contacto__formulario {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 10px;
+  background-color: #86a8d9;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.seccion-contacto__formulario-asunto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .seccion-contacto__formulario-asunto {
+    flex-direction: row;
+  }
 }
 
 .carousel-item {
-  background-color: #86a8d9;
+  background-color: black;
 }
 .carousel-item .title-suceso {
   width: 100%;
+  color: white;
   display: block;
   text-align: center;
   border: 1px solid black;
@@ -76,10 +93,28 @@ h4 {
   font-style: italic;
   font-weight: 600;
   font-family: serif;
+  padding: 2em;
   text-align: justify;
   padding: 0.5em;
+  color: white;
+}
+@media screen and (min-width: 577px) {
+  .carousel-item .title-suceso {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  .carousel-item .desc-suceso {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 }
 
+@media screen and (min-width: 577px) {
+  .slide {
+    width: 60%;
+    justify-self: center;
+  }
+}
 .header {
   width: 100%;
   background-color: #0576c7;
@@ -97,30 +132,90 @@ h4 {
 }
 .header__logo-empresa {
   grid-area: logo;
-  width: 70%;
+  width: 80px;
   align-self: center;
   justify-self: center;
+}
+@media screen and (min-width: 577px) {
+  .header {
+    grid-template-columns: 120px 1fr repeat(2, 20px);
+    grid-template-areas: "logo social social social" "logo  menu menu btn";
+  }
+  .header__logo-empresa {
+    justify-self: end;
+  }
 }
 
 .header__social-menu {
   grid-area: social;
-  border: 1px solid black;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   flex-direction: row;
-  gap: 2px;
 }
 .header__social-menu .social-item {
-  width: 100%;
+  width: 30px;
+  transition: transform 0.2seg ease-in-out;
 }
 .header__social-menu .social-item__icon {
   width: 20px;
+}
+.header__social-menu .social-item__icon:hover {
+  transform: scale(1.3);
+}
+@media screen and (min-width: 577px) {
+  .header__social-menu {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: row;
+  }
+  .header__social-menu .social-item {
+    width: 40px;
+  }
+  .header__social-menu .social-item__icon {
+    width: 35px;
+  }
 }
 
 .header__menu-principal {
   grid-area: menu;
   visibility: hidden;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 577px) {
+  .header__menu-principal {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .header__menu-principal-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-align: center;
+    gap: 10px;
+  }
+  .header__menu-principal-list li a {
+    color: white;
+    transition: transform 0.1s ease-in-out;
+  }
+  .header__menu-principal-list li a:hover {
+    transform: scale(1.2);
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__menu-principal-list {
+    font-size: 1rem;
+    gap: 40px;
+  }
 }
 
 .dropdown {
@@ -147,6 +242,11 @@ h4 {
   line-height: 2;
   border: 1px solid white;
 }
+@media screen and (min-width: 577px) {
+  .dropdown {
+    visibility: hidden;
+  }
+}
 
 main {
   width: 100%;
@@ -163,6 +263,8 @@ main {
   gap: 15px;
   font-size: 0.7rem;
   text-align: center;
+  z-index: 999;
+  bottom: 0;
   background-color: #0576c7;
   color: white;
 }
@@ -173,7 +275,472 @@ main {
   background-color: #0576c7;
   color: white;
 }
+@media screen and (min-width: 577px) {
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: ". . " "derechos defensa" ". desarrollo";
+    font-size: 0.8rem;
+  }
+  .footer__defensa {
+    grid-area: defensa;
+  }
+  .footer__derecho {
+    grid-area: derechos;
+  }
+  .footer__desarrollo {
+    grid-area: desarrollo;
+    justify-self: end;
+    margin-right: 2em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
 
+.seccion-productos__catalogo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  text-align: center;
+  text-align: center;
+  text-align: center;
+  text-align: center;
+  text-align: center;
+}
+.seccion-productos__catalogo-card-producto-asado-ventana {
+  width: 150px;
+  height: 100px;
+  background-image: url(../../images/ciclo-dos/cortes/asado-ventana.jpg);
+  background-size: cover;
+  background-position: center center;
+  border-radius: 100px;
+  border: 1px solid rgb(251, 250, 250);
+  transition: transform 0.2seg ease-in-out;
+}
+.seccion-productos__catalogo-card-producto-asado-ventana:hover {
+  transform: scale(1.4);
+}
+.seccion-productos__catalogo-card-producto-bife-ancho {
+  width: 150px;
+  height: 100px;
+  background-image: url(../../images/ciclo-dos/cortes/bife-ancho.jpg);
+  background-size: cover;
+  background-position: center center;
+  border-radius: 100px;
+  border: 1px solid rgb(251, 250, 250);
+  transition: transform 0.2seg ease-in-out;
+}
+.seccion-productos__catalogo-card-producto-bife-ancho:hover {
+  transform: scale(1.4);
+}
+.seccion-productos__catalogo-card-producto-carnaza-marucha {
+  width: 150px;
+  height: 100px;
+  background-image: url(../../images/ciclo-dos/cortes/carnaza-marucha.jpg);
+  background-size: cover;
+  background-position: center center;
+  border-radius: 100px;
+  border: 1px solid rgb(251, 250, 250);
+  transition: transform 0.2seg ease-in-out;
+}
+.seccion-productos__catalogo-card-producto-carnaza-marucha:hover {
+  transform: scale(1.4);
+}
+.seccion-productos__catalogo-card-producto-chingolo {
+  width: 150px;
+  height: 100px;
+  background-image: url(../../images/ciclo-dos/cortes/chingolo.jpg);
+  background-size: cover;
+  background-position: center center;
+  border-radius: 100px;
+  border: 1px solid rgb(251, 250, 250);
+  transition: transform 0.2seg ease-in-out;
+}
+.seccion-productos__catalogo-card-producto-chingolo:hover {
+  transform: scale(1.4);
+}
+.seccion-productos__catalogo-card-producto-cogote {
+  width: 150px;
+  height: 100px;
+  background-image: url(../../images/ciclo-dos/cortes/cogote.jpg);
+  background-size: cover;
+  background-position: center center;
+  border-radius: 100px;
+  border: 1px solid rgb(251, 250, 250);
+  transition: transform 0.2seg ease-in-out;
+}
+.seccion-productos__catalogo-card-producto-cogote:hover {
+  transform: scale(1.4);
+}
+.seccion-productos__catalogo-card-producto-corazon-cuadril {
+  width: 150px;
+  height: 100px;
+  background-image: url(../../images/ciclo-dos/cortes/corazon-cuadril.jpg);
+  background-size: cover;
+  background-position: center center;
+  border-radius: 100px;
+  border: 1px solid rgb(251, 250, 250);
+  transition: transform 0.2seg ease-in-out;
+}
+.seccion-productos__catalogo-card-producto-corazon-cuadril:hover {
+  transform: scale(1.4);
+}
+.seccion-productos__catalogo-card-desc-asado-ventana::before {
+  content: "Asado Ventana";
+}
+.seccion-productos__catalogo-card-desc-bife-ancho::before {
+  content: "Bife Ancho";
+}
+.seccion-productos__catalogo-card-desc-carnaza-marucha::before {
+  content: "Carnaza Marucha";
+}
+.seccion-productos__catalogo-card-desc-chingolo::before {
+  content: "Chingolo";
+}
+.seccion-productos__catalogo-card-desc-cogote::before {
+  content: "Cogote";
+}
+.seccion-productos__catalogo-card-desc-corazon-cuadril::before {
+  content: "Corazon de Cuadril";
+}
+.seccion-productos__catalogo-card p {
+  font-size: small;
+  color: white;
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .seccion-productos__catalogo-card {
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+  }
+  .seccion-productos__catalogo-card-producto-asado-ventana {
+    width: 300px;
+    height: 250px;
+    background-image: url(../../images/ciclo-dos/cortes/asado-ventana.jpg);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 100px;
+    border: 1px solid black;
+    transition: transform 0.2seg ease-in-out;
+  }
+  .seccion-productos__catalogo-card-producto-asado-ventana:hover {
+    transform: scale(1.4);
+  }
+  .seccion-productos__catalogo-card-desc-asado-ventana::before {
+    content: "Asado Ventana";
+  }
+  .seccion-productos__catalogo-card-desc-bife-ancho::before {
+    content: "Bife Ancho";
+  }
+  .seccion-productos__catalogo-card-desc-carnaza-marucha::before {
+    content: "Carnaza Marucha";
+  }
+  .seccion-productos__catalogo-card-desc-chingolo::before {
+    content: "Chingolo";
+  }
+  .seccion-productos__catalogo-card-desc-cogote::before {
+    content: "Cogote";
+  }
+  .seccion-productos__catalogo-card-desc-corazon-cuadril::before {
+    content: "Corazon de Cuadril";
+  }
+  .seccion-productos__catalogo-card p {
+    font-size: 1.2rem;
+  }
+  .seccion-productos__catalogo-card-producto-bife-ancho {
+    width: 300px;
+    height: 250px;
+    background-image: url(../../images/ciclo-dos/cortes/bife-ancho.jpg);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 100px;
+    border: 1px solid black;
+    transition: transform 0.2seg ease-in-out;
+  }
+  .seccion-productos__catalogo-card-producto-bife-ancho:hover {
+    transform: scale(1.4);
+  }
+  .seccion-productos__catalogo-card-desc-asado-ventana::before {
+    content: "Asado Ventana";
+  }
+  .seccion-productos__catalogo-card-desc-bife-ancho::before {
+    content: "Bife Ancho";
+  }
+  .seccion-productos__catalogo-card-desc-carnaza-marucha::before {
+    content: "Carnaza Marucha";
+  }
+  .seccion-productos__catalogo-card-desc-chingolo::before {
+    content: "Chingolo";
+  }
+  .seccion-productos__catalogo-card-desc-cogote::before {
+    content: "Cogote";
+  }
+  .seccion-productos__catalogo-card-desc-corazon-cuadril::before {
+    content: "Corazon de Cuadril";
+  }
+  .seccion-productos__catalogo-card p {
+    font-size: 1.2rem;
+  }
+  .seccion-productos__catalogo-card-producto-carnaza-marucha {
+    width: 300px;
+    height: 250px;
+    background-image: url(../../images/ciclo-dos/cortes/carnaza-marucha.jpg);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 100px;
+    border: 1px solid black;
+    transition: transform 0.2seg ease-in-out;
+  }
+  .seccion-productos__catalogo-card-producto-carnaza-marucha:hover {
+    transform: scale(1.4);
+  }
+  .seccion-productos__catalogo-card-desc-asado-ventana::before {
+    content: "Asado Ventana";
+  }
+  .seccion-productos__catalogo-card-desc-bife-ancho::before {
+    content: "Bife Ancho";
+  }
+  .seccion-productos__catalogo-card-desc-carnaza-marucha::before {
+    content: "Carnaza Marucha";
+  }
+  .seccion-productos__catalogo-card-desc-chingolo::before {
+    content: "Chingolo";
+  }
+  .seccion-productos__catalogo-card-desc-cogote::before {
+    content: "Cogote";
+  }
+  .seccion-productos__catalogo-card-desc-corazon-cuadril::before {
+    content: "Corazon de Cuadril";
+  }
+  .seccion-productos__catalogo-card p {
+    font-size: 1.2rem;
+  }
+  .seccion-productos__catalogo-card-producto-chingolo {
+    width: 300px;
+    height: 250px;
+    background-image: url(../../images/ciclo-dos/cortes/chingolo.jpg);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 100px;
+    border: 1px solid black;
+    transition: transform 0.2seg ease-in-out;
+  }
+  .seccion-productos__catalogo-card-producto-chingolo:hover {
+    transform: scale(1.4);
+  }
+  .seccion-productos__catalogo-card-desc-asado-ventana::before {
+    content: "Asado Ventana";
+  }
+  .seccion-productos__catalogo-card-desc-bife-ancho::before {
+    content: "Bife Ancho";
+  }
+  .seccion-productos__catalogo-card-desc-carnaza-marucha::before {
+    content: "Carnaza Marucha";
+  }
+  .seccion-productos__catalogo-card-desc-chingolo::before {
+    content: "Chingolo";
+  }
+  .seccion-productos__catalogo-card-desc-cogote::before {
+    content: "Cogote";
+  }
+  .seccion-productos__catalogo-card-desc-corazon-cuadril::before {
+    content: "Corazon de Cuadril";
+  }
+  .seccion-productos__catalogo-card p {
+    font-size: 1.2rem;
+  }
+  .seccion-productos__catalogo-card-producto-cogote {
+    width: 300px;
+    height: 250px;
+    background-image: url(../../images/ciclo-dos/cortes/cogote.jpg);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 100px;
+    border: 1px solid black;
+    transition: transform 0.2seg ease-in-out;
+  }
+  .seccion-productos__catalogo-card-producto-cogote:hover {
+    transform: scale(1.4);
+  }
+  .seccion-productos__catalogo-card-desc-asado-ventana::before {
+    content: "Asado Ventana";
+  }
+  .seccion-productos__catalogo-card-desc-bife-ancho::before {
+    content: "Bife Ancho";
+  }
+  .seccion-productos__catalogo-card-desc-carnaza-marucha::before {
+    content: "Carnaza Marucha";
+  }
+  .seccion-productos__catalogo-card-desc-chingolo::before {
+    content: "Chingolo";
+  }
+  .seccion-productos__catalogo-card-desc-cogote::before {
+    content: "Cogote";
+  }
+  .seccion-productos__catalogo-card-desc-corazon-cuadril::before {
+    content: "Corazon de Cuadril";
+  }
+  .seccion-productos__catalogo-card p {
+    font-size: 1.2rem;
+  }
+  .seccion-productos__catalogo-card-producto-corazon-cuadril {
+    width: 300px;
+    height: 250px;
+    background-image: url(../../images/ciclo-dos/cortes/corazon-cuadril.jpg);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 100px;
+    border: 1px solid black;
+    transition: transform 0.2seg ease-in-out;
+  }
+  .seccion-productos__catalogo-card-producto-corazon-cuadril:hover {
+    transform: scale(1.4);
+  }
+  .seccion-productos__catalogo-card-desc-asado-ventana::before {
+    content: "Asado Ventana";
+  }
+  .seccion-productos__catalogo-card-desc-bife-ancho::before {
+    content: "Bife Ancho";
+  }
+  .seccion-productos__catalogo-card-desc-carnaza-marucha::before {
+    content: "Carnaza Marucha";
+  }
+  .seccion-productos__catalogo-card-desc-chingolo::before {
+    content: "Chingolo";
+  }
+  .seccion-productos__catalogo-card-desc-cogote::before {
+    content: "Cogote";
+  }
+  .seccion-productos__catalogo-card-desc-corazon-cuadril::before {
+    content: "Corazon de Cuadril";
+  }
+  .seccion-productos__catalogo-card p {
+    font-size: 1.2rem;
+  }
+}
+
+.seccion-novedades__noticias-article {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+  padding: 5px;
+  border: 1px solid #86a8d9;
+}
+.seccion-novedades__noticias-article figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+}
+.seccion-novedades__noticias-article figure img {
+  width: 140px;
+}
+.seccion-novedades__noticias-article figure figcaption {
+  font-size: 10px;
+  text-align: justify;
+}
+.seccion-novedades__noticias-article p {
+  margin: 0;
+  font-size: 12px;
+  padding: 10px 0 10px 0;
+  text-align: justify;
+}
+
+.seccion-novedades__presupuesto {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #0576c7;
+  border-radius: 20px;
+  padding: 0.5em;
+}
+
+@media screen and (min-width: 768px) {
+  .seccion-novedades__noticias, .seccion-novedades__redes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .seccion-novedades__noticias-article {
+    justify-self: center;
+  }
+  .seccion-novedades__noticias-article p {
+    font-size: 1.5rem;
+    padding: 0.5em;
+  }
+  .seccion-novedades__noticias figure, .seccion-novedades__redes figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+  }
+  .seccion-novedades__noticias figure img, .seccion-novedades__redes figure img {
+    width: 300px;
+  }
+  .seccion-novedades__noticias figure figcaption, .seccion-novedades__redes figure figcaption {
+    font-size: 1rem;
+    text-align: justify;
+  }
+  .seccion-novedades__presupuesto {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #0576c7;
+    border-radius: 20px;
+    padding: 0.5em;
+    font-size: 2rem;
+  }
+}
 .seccion-principal {
   width: 100%;
   display: flex;
@@ -196,21 +763,27 @@ main {
   width: 100%;
 }
 .seccion-principal__portada-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
   font-size: 1rem;
   font-style: italic;
   font-weight: 600;
   font-family: serif;
+  padding: 2em;
   width: 100%;
-  height: 25vh;
+  height: 30vh;
   padding: 1em;
+  font-size: 1.2rem;
 }
 .seccion-principal__article {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: rgb(236, 240, 23);
+  background-color: rgb(240, 139, 23);
   color: black;
   padding: 1em;
 }
@@ -223,6 +796,7 @@ main {
   font-style: italic;
   font-weight: 600;
   font-family: serif;
+  padding: 2em;
   text-align: justify;
 }
 .seccion-principal__article-boton {
@@ -233,10 +807,21 @@ main {
   margin-bottom: 5px;
   border: solid 2px white;
 }
+.seccion-principal__article-boton:hover {
+  color: black;
+  font-weight: bold;
+}
+@media screen and (min-width: 577px) {
+  .seccion-principal__article-boton {
+    font-size: 1.5rem;
+  }
+}
 .seccion-principal__contacto {
+  width: 100%;
   height: 200px;
   background-image: url(../../../images/fondos/banner-contacto.png);
   background-size: cover;
+  background-position: center;
   color: white;
   display: flex;
   align-items: start;
@@ -253,6 +838,48 @@ main {
   margin-bottom: 5px;
   border: solid 2px white;
   margin-top: 10px;
+}
+.seccion-principal__contacto-boton:hover {
+  color: black;
+  font-weight: bold;
+}
+@media screen and (min-width: 577px) {
+  .seccion-principal__contacto-boton {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 577px) {
+  .seccion-principal__article {
+    width: 100%;
+  }
+  .seccion-principal__portada {
+    width: 100%;
+  }
+  .seccion-principal__portada-desc {
+    font-size: 1rem;
+  }
+  .seccion-principal__contacto {
+    height: 30vh;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .seccion-principal__portada {
+    width: 100%;
+  }
+  .seccion-principal__portada-desc {
+    font-size: 2rem;
+  }
+  .seccion-principal__article {
+    width: 100%;
+    height: 60vh;
+  }
+  .seccion-principal__article-title {
+    font-size: 3rem;
+  }
+  .seccion-principal__article-text {
+    font-size: 2rem;
+  }
 }
 
 .seccion-nosotros {
@@ -285,7 +912,7 @@ main {
   justify-content: center;
   flex-direction: column;
   padding: 1em;
-  background-color: rgba(160, 38, 38, 0.527);
+  background-color: rgb(236, 205, 29);
 }
 .seccion-nosotros__card-text {
   text-align: center;
@@ -293,6 +920,7 @@ main {
   font-style: italic;
   font-weight: 600;
   font-family: serif;
+  padding: 2em;
   text-align: justify;
 }
 .seccion-nosotros__card-btn {
@@ -304,6 +932,42 @@ main {
   border: solid 2px white;
   outline: none;
 }
+.seccion-nosotros__card-btn:hover {
+  color: black;
+  font-weight: bold;
+}
+@media screen and (min-width: 577px) {
+  .seccion-nosotros__card-btn {
+    font-size: 1.5rem;
+  }
+}
+.seccion-nosotros .vision-historia {
+  width: 100%;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.seccion-nosotros .vision-historia iframe {
+  height: 50vh;
+  width: 100%;
+}
+.seccion-nosotros h2 {
+  font-size: 2rem;
+}
+.seccion-nosotros__card {
+  width: 60%;
+  border: 2px solid rgb(152, 18, 18);
+}
+.seccion-nosotros__card-title {
+  font-size: 1.5rem;
+}
+.seccion-nosotros__card-text {
+  font-size: 1.5rem;
+  padding: 1em;
+}
 
 .seccion-productos {
   width: 100%;
@@ -311,7 +975,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   margin-bottom: 20px;
 }
 .seccion-productos__title {
@@ -324,6 +988,7 @@ main {
   justify-content: center;
   flex-direction: column;
   background-size: cover;
+  background-position: center;
   background-color: black;
   color: white;
 }
@@ -346,62 +1011,127 @@ main {
   border: 1px solid #025591;
 }
 .seccion-productos__catalogo {
-  background-color: #ffffff;
+  background-color: #040404;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   width: 90%;
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   overflow-y: auto;
+  border-radius: 20px;
 }
-.seccion-productos__catalogo-producto-asado-ventana {
-  width: 100px;
-  height: 100px;
-  background-image: url(../../images/ciclo-dos/cortes/asado-ventana.jpg);
-  background-size: cover;
-  background-position: center center;
-  border-radius: 100px;
+@media screen and (min-width: 577px) {
+  .seccion-productos__banner-portada {
+    width: 80%;
+    height: 40vh;
+    font-weight: bold;
+  }
+  .seccion-productos h2 {
+    font-size: 2rem;
+  }
 }
-.seccion-productos__catalogo-producto-bife-ancho {
-  width: 100px;
-  height: 100px;
-  background-image: url(../../images/ciclo-dos/cortes/bife-ancho.jpg);
-  background-size: cover;
-  background-position: center center;
-  border-radius: 100px;
+
+.seccion-contacto {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
 }
-.seccion-productos__catalogo-producto-carnaza-marucha {
-  width: 100px;
-  height: 100px;
-  background-image: url(../../images/ciclo-dos/cortes/carnaza-marucha.jpg);
-  background-size: cover;
-  background-position: center center;
-  border-radius: 100px;
+.seccion-contacto__title {
+  margin-top: 15px;
 }
-.seccion-productos__catalogo-producto-chingolo {
-  width: 100px;
-  height: 100px;
-  background-image: url(../../images/ciclo-dos/cortes/chingolo.jpg);
-  background-size: cover;
-  background-position: center center;
-  border-radius: 100px;
+.seccion-contacto__ventas {
+  width: 100%;
+  background-color: rgb(240, 139, 23);
+  background-color: rgb(240, 139, 23);
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: large;
 }
-.seccion-productos__catalogo-producto-cogote {
-  width: 100px;
-  height: 100px;
-  background-image: url(../../images/ciclo-dos/cortes/cogote.jpg);
-  background-size: cover;
-  background-position: center center;
-  border-radius: 100px;
+.seccion-contacto__ubicacion {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 20px;
 }
-.seccion-productos__catalogo-producto-corazon-cuadril {
-  width: 100px;
-  height: 100px;
-  background-image: url(../../images/ciclo-dos/cortes/corazon-cuadril.jpg);
-  background-size: cover;
-  background-position: center center;
-  border-radius: 100px;
+.seccion-contacto__ubicacion span {
+  font-size: small;
+  text-decoration: underline;
+}
+.seccion-contacto__ubicacion iframe {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .seccion-contacto__ventas {
+    height: 40vh;
+    font-size: 2rem;
+  }
+}
+
+.seccion-novedades {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.seccion-novedades__title {
+  margin-top: 15px;
+}
+.seccion-novedades__subtitles {
+  align-self: start;
+  padding-left: 1em;
+  text-decoration: underline;
+  font-style: italic;
+}
+.seccion-novedades__noticias, .seccion-novedades__redes {
+  overflow-y: auto;
+  height: 300px;
+  width: 100%;
+  border: 1px solid black;
+  padding: 5px;
+}
+.seccion-novedades__redes {
+  width: 95%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.seccion-novedades__redes-article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: justify;
+  padding: 10px;
+  border: 1px solid blue;
+  border-radius: 10px;
+}
+.seccion-novedades__redes-article img {
+  width: 100%;
+}
+.seccion-novedades__redes-article h3 {
+  font-size: small;
+  text-decoration: underline;
+}
+@media screen and (min-width: 768px) {
+  .seccion-novedades__noticias, .seccion-novedades__redes {
+    height: 50vh;
+  }
+  .seccion-novedades__redes {
+    width: 80%;
+  }
+  .seccion-novedades__redes-article img {
+    width: 350px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

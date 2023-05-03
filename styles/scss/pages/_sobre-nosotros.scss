@@ -1,42 +1,72 @@
-.seccion-nosotros{
+.seccion-nosotros {
     width: 100%;
-    @include flex-box (center,center,column);
+    @include flex-box (center, center, column);
     gap: 10px;
     margin-bottom: 20px;
 
-    &__title{
+    &__title {
         margin-top: 15px;
     }
 
-    &__subtitles{
+    &__subtitles {
         align-self: start;
         padding-left: 1em;
         text-decoration: underline;
         font-style: italic;
     }
-    .vision-historia{
+
+    .vision-historia {
         width: 100%;
     }
 
-    &__card{        
+    &__card {
 
-        img {width: 100%;}
+        img {
+            width: 100%;
+        }
 
-        &-body{
-            @include flex-box(center,center,column);
+        &-body {
+            @include flex-box(center, center, column);
             padding: 1em;
             background-color: $card-color;
         }
-        &-text{
+
+        &-text {
             @include estilo-parrafo;
             text-align: justify;
         }
-        &-btn{
+
+        &-btn {
             @include button-index;
-            outline: none;            
-           
+            outline: none;
+
         }
 
     }
-       
+    .vision-historia{
+        width: 100%;
+        justify-self: center;
+        align-self: center;
+        @include flex-box;
+        
+    iframe{
+        height: 50vh;
+        width: 100%;
+    }
+    }
+    h2{
+        font-size: 2rem;
+    }
+    &__card{
+        width: 60%;
+        border: 2px solid rgb(152, 18, 18);
+
+        &-title{
+            font-size: 1.5rem;
+        }
+        &-text{
+            font-size: 1.5rem;
+            padding: 1em;
+        }
+    }
 }

@@ -1,15 +1,29 @@
 .header__social-menu {
     grid-area: social;
-    border: 1px solid black;
-    @include flex-box(center,center,row);
-    gap: 2px;
+    @include flex-box(end, center, row);
+    
+    .social-item {
+        width: max(30px);
+        transition: transform 0.2seg ease-in-out;
+        &__icon {
+            width: 20px;
+            
+        }
+        &__icon:hover{
+            transform: scale(1.3);
+        }
+    }
+@include tablet-resolution(){    
+    gap: 15px;
+    @include flex-box(end,center,row);
 
     .social-item{
-        width: 100%;
+        width: 40px;
 
         &__icon{
-            width: 20px;
+            width: 35px;
         }
     }
 
+}
 }

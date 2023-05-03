@@ -1,0 +1,40 @@
+.seccion-contacto {
+    width: 100%;
+    @include flex-box (center, center, column);
+    gap: 20px;
+    margin-bottom: 20px;
+
+    &__title {
+        margin-top: 15px;
+    }
+
+    &__ventas {
+        width: 100%;
+        background-color: $tertiary-color;        
+        @include contraste($tertiary-color);
+        @include flex-box;
+        font-weight: bold;
+        font-size: large;
+    }
+
+    &__ubicacion {
+        width: 100%;
+        height: 500px;
+        margin-bottom: 20px;
+
+        span {
+            font-size: small;
+            text-decoration: underline;
+        }
+
+        iframe {
+            width: 100%;
+        }
+    }
+    @include desktop-resolution(){
+        &__ventas{
+            height: 40vh;
+            font-size: 2rem;
+        }
+    }
+}

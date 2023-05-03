@@ -1,3 +1,150 @@
-.seccion-productos__catalogo-card{
-    @include flex-box (center,center,column)
+.seccion-productos__catalogo-card {
+    @include flex-box (center, center, column);
+
+    @each $imagen,
+    $ruta in $cortes-imagenes {
+        &-producto-#{$imagen} {
+            width: 150px;
+            height: 100px;
+            background-image: url(#{$ruta});
+            background-size: cover;
+            background-position: center center;
+            border-radius: 100px;
+            border: 1px solid rgb(251, 250, 250);
+            transition: transform 0.2seg ease-in-out;
+
+            &:hover {
+                transform: scale(1.4);
+            }
+        }
+
+    }
+
+    @each $imagen,
+    $desc in $descripciones {
+        &-#{$imagen}::before {
+            content: "#{$desc}";
+        }
+
+        text-align: center;
+    }
+
+    p {
+        font-size: small;
+        color: white;
+        font-weight: bold;
+    }
+
+    @include desktop-resolution() {
+
+        @each $imagen,
+        $ruta in $cortes-imagenes {
+            &-producto-#{$imagen} {
+                width: 300px;
+                height: 250px;
+                background-image: url(#{$ruta});
+                background-size: cover;
+                background-position: center center;
+                border-radius: 100px;
+                border: 1px solid black;
+                transition: transform 0.2seg ease-in-out;
+
+                &:hover {
+                    transform: scale(1.4);
+                }
+            }
+
+            @each $imagen,
+            $desc in $descripciones {
+                &-#{$imagen}::before {
+                    content: "#{$desc}";
+                }
+
+                text-align: center;
+            }
+
+            p {
+                font-size: 1.2rem;
+
+            }
+
+        }
+
+    }
+}
+
+.seccion-novedades__noticias-article {
+    width: 100%;
+    @include flex-box (center, center, row);
+    gap: 5px;
+    padding: 5px;
+    border: 1px solid $secondary-color;
+
+    figure {
+        @include flex-box;
+        margin: 0;
+
+        img {
+            width: 140px;
+        }
+
+        figcaption {
+            font-size: 10px;
+            text-align: justify;
+        }
+    }
+
+    p {
+        margin: 0;
+        font-size: 12px;
+        padding: 10px 0 10px 0;
+        text-align: justify;
+    }
+}
+
+.seccion-novedades__presupuesto {
+    width: 100%;
+    @include flex-box;
+    border: 1px solid $primary-color;
+    border-radius: 20px;
+    padding: .5em;
+
+}
+@include desktop-resolution(){
+    .seccion-novedades__noticias{
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       gap: 20px;
+
+       &-article{
+        justify-self: center;  
+        p{
+            font-size: 1.5rem;
+            padding:.5em;
+        }      
+       }
+
+       figure {
+        @include flex-box;
+        margin: 0;
+
+        img {
+            width: 300px;
+        }
+
+        figcaption {
+            font-size: 1rem;
+            text-align: justify;
+        }      
+    }       
+    
+    }
+    .seccion-novedades__presupuesto {
+        width: 80%;
+        @include flex-box;
+        border: 1px solid $primary-color;
+        border-radius: 20px;
+        padding: .5em;
+        font-size: 2rem;
+    }
 }

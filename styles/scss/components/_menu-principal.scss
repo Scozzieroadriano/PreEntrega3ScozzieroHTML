@@ -1,4 +1,37 @@
-.header__menu-principal{
+.header__menu-principal {
     grid-area: menu;
     visibility: hidden;
+    margin: 0;
+    padding: 0;
+
+    @include tablet-resolution(){
+        visibility: visible;
+        @include flex-box(center,center,column);
+ 
+
+        &-list{
+            @include flex-box(center,center,row);
+            font-size: .85rem;
+            font-weight: bold;
+            text-align: center;
+            gap:10px;
+
+            li a{
+                color: white;
+                transition: transform 0.1s ease-in-out;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+    }
+
+    @include desktop-resolution(){
+            &-list{
+                font-size: 1rem;
+                gap: 40px;
+            }
+        
+    }
 }

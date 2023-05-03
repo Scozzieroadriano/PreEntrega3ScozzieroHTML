@@ -2,26 +2,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../styles/css/styles.css">
     <title>Contáctanos | Frigorífico Larrauri</title>
 </head>
+
 <body>
 
     <header class="header">
 
-        <img  class="header__logo-empresa" src="../images/Logo-Finlar-Vectorizado-sin-titulo.png" alt="imagen del logo de la empresa finlar">
-       
+        <img class="header__logo-empresa" src="../images/Logo-Finlar-Vectorizado-sin-titulo.png"
+            alt="imagen del logo de la empresa finlar">
+
         <ul class="header__social-menu">
-            <li class="social-item"><a href="https://www.facebook.com/" target="_blank"><img class="social-item__icon" src="../images/icons/facebook-icon.svg" alt="icono de red social facebook"></a></li>
-            <li class="social-item"><a href="https://www.instagram.com/" target="_blank"><img class="social-item__icon" src="../images/icons/instagram-icon.svg" alt="icono de red social instagramk"></a></li>
-            <li class="social-item"><a href="https://www.linkedin.com/" target="_blank"><img class="social-item__icon" src="../images/icons/linkedin-icon.svg" alt="icono de red social linkedin"></a></li>
-            <li class="social-item"><a href="https://www.twitter.com/" target="_blank"><img class="social-item__icon" src="../images/icons/twitter-icon.svg" alt="icono de red social twitter"></a></li>
-            <li class="social-item"><a href="https://web.whatsapp.com/"target="_blank"><img class="social-item__icon" src="../images/icons/whatsapp-icon.svg" alt="icono de chat whatsapp"></a></li>
-            <li class="social-item"><a href="https://www.youtube.com/" target="_blank"><img class="social-item__icon" src="../images/icons/youtube-icon.svg" alt="icono de canal de youtube"></a></li>
+            <li class="social-item"><a href="https://www.facebook.com/" target="_blank"><img class="social-item__icon"
+                        src="../images/icons/facebook-icon.svg" alt="icono de red social facebook"></a></li>
+            <li class="social-item"><a href="https://www.instagram.com/" target="_blank"><img class="social-item__icon"
+                        src="../images/icons/instagram-icon.svg" alt="icono de red social instagramk"></a></li>
+            <li class="social-item"><a href="https://www.linkedin.com/" target="_blank"><img class="social-item__icon"
+                        src="../images/icons/linkedin-icon.svg" alt="icono de red social linkedin"></a></li>
+            <li class="social-item"><a href="https://www.twitter.com/" target="_blank"><img class="social-item__icon"
+                        src="../images/icons/twitter-icon.svg" alt="icono de red social twitter"></a></li>
+            <li class="social-item"><a href="https://web.whatsapp.com/" target="_blank"><img class="social-item__icon"
+                        src="../images/icons/whatsapp-icon.svg" alt="icono de chat whatsapp"></a></li>
+            <li class="social-item"><a href="https://www.youtube.com/" target="_blank"><img class="social-item__icon"
+                        src="../images/icons/youtube-icon.svg" alt="icono de canal de youtube"></a></li>
         </ul>
 
         <nav class="header__menu-principal">
@@ -37,8 +48,8 @@
         </nav>
 
         <nav class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle dropdown-no-caret" type="button"
-                id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn btn-secondary dropdown-toggle dropdown-no-caret" type="button" id="dropdownMenuButton"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img src="../images/icons/button-menu-icon.svg" alt="boton de menú desplegable">
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -52,14 +63,88 @@
     </header>
 
     <main>
-        <h1>Contacto</h1>
-        <section>
-            
+
+        <section class="seccion-contacto">
+            <h1 class="seccion-contacto__title">CONTACTO</h1>
+
+            <div class="seccion-contacto__ventas">
+
+                <h2>Información de contacto</h2>
+                <p style="text-align: center;">
+                    (+549) 03464 471109 <br>
+                    ventas@tatata.com.ar <br>
+                    repuestos@tatata.com.ar <br>
+                    administracion@tatata.com.ar <br>
+                    compras@tatata.com.ar <br>
+                    recepcion@tatata.com.ar</p>
+            </div>
+
+        </section>
+
+        <form class="seccion-contacto__formulario" action="">
+            <div>
+                <label for="nombre-usuario"></label>
+                <input id="nombre-usuario" type="text" placeholder="Nombre y Apellido" size="30px">
+            </div>
+            <div class="seccion-contacto__formulario-asunto">
+                <label for="email-usuario"></label>
+                <input id="email-usuario" type="email" placeholder="Correo Electronico:(ejemplo@gmail.com.ar)" size="30px">
+            </div>
+            <div class="seccion-contacto__formulario-asunto">
+                <label for="asunto-mensaje">Selecciona el asunto:</label>
+                <select name="" id="asunto-mensaje">
+                    <option value="mensaje">Mensaje</option>
+                    <option value="empleo">Solicitud empleo</option>
+                    <option value="reportes">Remporta un problema</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            <div class="seccion-contacto__formulario-asunto">
+                <label for="mensaje-usuario"></label>
+                <textarea id="mensaje-usuario" cols="30" rows="10" placeholder="Su mensaje aquí"></textarea>
+            </div>
+            <div class="seccion-contacto__formulario-asunto">
+                <span>Género:</span>
+                <div class="seccion-contacto__formulario-asunto">
+                    <label for="genero-hombre">Hombre</label>
+                    <input id="genero-hombre" type="radio" name="radio-genero" value="Hombre">
+
+                    <label for="genero-mujer">Mujer</label>
+                    <input id="genero-mujer" type="radio" name="radio-genero" value="Mujer">
+
+                    <label for="sin-genero">Prefiero no decirlo</label>
+                    <input id="sin-genero" type="radio" name="radio-genero" value="Sin genero">
+                </div>
+            </div>
+
+            <div class="seccion-contacto__formulario-asunto">
+                <input type="submit" value="Enviar mensaje">
+                <input type="reset" value="Limpiar campos">
+            </div>
+        </form>
+
+        <section class="seccion-contacto__ubicacion">
+            <span>Avenida San Martin 825, Granadero Baigorria, Santa Fe, Argentina</span>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4043.3579082516994!2d-60.70324235915937!3d-32.863797614550414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b653dc46782eb1%3A0x2bce639a58b3abf9!2sAv.%20San%20Mart%C3%ADn%20825%2C%20S2000%20Granadero%20Baigorria%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1683065302870!5m2!1ses-419!2sar"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
         </section>
 
     </main>
-    <footer></footer>
+    <footer class="footer">
+        <span class="footer__derecho"><strong>Finlar S.A. © Todos los derechos reservados - 2023 </strong> </span>
+        <span class="footer__defensa">Defensa de las y los Consumidores. Reclamos: <a
+                href="https://www.argentina.gob.ar/economia/comercio/defensadelconsumidor" target="_blank">aquí</a>
+        </span>
+        <span class="footer__desarrollo">Desarrollado por Adriano Scozziero</span>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

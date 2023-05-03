@@ -5,6 +5,10 @@
     gap: 15px;
     font-size: .7rem;
     text-align: center;
+    z-index: 999;
+    bottom: 0;
+    
+
     @include contraste($primary-color);
 
 
@@ -15,4 +19,32 @@
 
     }
 
+    @include tablet-resolution(){
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,auto);
+        grid-template-areas: 
+        ". . "
+        "derechos defensa"
+        ". desarrollo";
+        font-size: .8rem;
+        
+        &__defensa{
+            grid-area: defensa;
+        }
+        &__derecho{
+            grid-area: derechos;
+        }
+        &__desarrollo{
+            grid-area: desarrollo;
+            justify-self: end;
+            margin-right: 2em;
+        }
+    }
+    @include desktop-resolution(){
+        font-size: 1rem;
+        font-weight: bold;
+
+    }
+    
 }

@@ -1,15 +1,18 @@
-.carousel-item{
-    background-color: $secondary-color;
-    .title-suceso{
+.carousel-item {
+    background-color: black;
+
+    .title-suceso {
         width: 100%;
+        color: white;
         display: block;
         text-align: center;
         border: 1px solid black;
         border-bottom: none;
-        margin:0;
-        padding:.5em
+        margin: 0;
+        padding: .5em
     }
-    .desc-suceso{
+
+    .desc-suceso {
         width: 100%;
         display: block;
         border: 1px solid black;
@@ -17,7 +20,24 @@
         margin: 0;
         @include estilo-parrafo;
         text-align: justify;
-        padding:.5em
-
+        padding: .5em;
+        color:white
+    }
+    @include tablet-resolution(){
+        .title-suceso {
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        .desc-suceso{
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+    }
+}
+@include tablet-resolution(){
+    .slide{
+        width: 60%;
+        justify-self: center;
     }
 }

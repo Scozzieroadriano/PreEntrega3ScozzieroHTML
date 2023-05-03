@@ -1,0 +1,18 @@
+.seccion-contacto__formulario {
+    @include flex-box (center, center, column);
+    gap: 10px;
+    background-color: $secondary-color;
+    padding: 5px;
+    margin-bottom: 20px;
+
+    &-asunto {
+        @include flex-box (center, center, column);
+        gap: 10px;
+    }
+
+    @include desktop-resolution(){
+        &-asunto {
+            flex-direction: row;
+        }
+    }
+}
